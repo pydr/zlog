@@ -1,0 +1,32 @@
+{
+  "desc":"development",
+  "level":"debug",
+  "stdout":true
+  "encoding":"consol",
+  "addCaller":true,
+  "color":true,
+  "filesout":[
+    {
+      "level":"error"
+      "hook":{
+          "filename": "/tmp/gaven-error.log",
+	      "maxsize": 5,
+	      "maxage": 10,
+	      "maxbackups": 3,
+	      "localtime": true,
+	      "compress": true
+      }
+    },
+    {
+      "level":"warn"
+      "hook":{
+          "filename": "/tmp/gaven-warn.log",
+	      "maxsize": 5,
+	      "maxage": 10,
+	      "maxbackups": 3,
+	      "localtime": true,
+	      "compress": true
+      }
+    }
+  ]
+}
