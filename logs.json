@@ -10,7 +10,7 @@
     {
       "level":"error",
       "hook":{
-          "filename": "/tmp/gavenlogs/gaven-error.log",
+          "filename": "/tmp/logs/zlog-error.log",
 	      "maxsize": 1,
 	      "maxage": 7,
 	      "maxbackups": 3,
@@ -21,7 +21,7 @@
     {
       "level":"warn",
       "hook":{
-          "filename": "/tmp/gavenlogs/gaven-warn.log",
+          "filename": "/tmp/logs/zlog-warn.log",
 	      "maxsize": 1,
 	      "maxage": 7,
 	      "maxbackups": 3,
