@@ -2,7 +2,7 @@
   "desc":"development",
   "level":"debug",
   "stdout":true,
-  "encoding":"consol",
+  "encoding":"console",
   "addCaller":true,
   "color":true,
   "filesout":true,
@@ -10,9 +10,9 @@
     {
       "level":"error",
       "hook":{
-          "filename": "/tmp/gaven-error.log",
-	      "maxsize": 5,
-	      "maxage": 10,
+          "filename": "/tmp/gavenlogs/gaven-error.log",
+	      "maxsize": 1,
+	      "maxage": 7,
 	      "maxbackups": 3,
 	      "localtime": true,
 	      "compress": true
@@ -21,12 +21,12 @@
     {
       "level":"warn",
       "hook":{
-          "filename": "/tmp/gaven-warn.log",
-	      "maxsize": 5,
-	      "maxage": 10,
+          "filename": "/tmp/gavenlogs/gaven-warn.log",
+	      "maxsize": 1,
+	      "maxage": 7,
 	      "maxbackups": 3,
 	      "localtime": true,
-	      "compress": true
+	      "compress": false
       }
     }
   ]
