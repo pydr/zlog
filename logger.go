@@ -27,6 +27,14 @@ type logFilePath struct {
 	Hook  *lumberjack.Logger
 }
 
+var (
+	Zlog *zap.Logger
+)
+
+func init() {
+	Zlog = New()
+}
+
 func New() *zap.Logger {
 	logcfg := logConfig{
 		Desc:      "development",
