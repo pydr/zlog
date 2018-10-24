@@ -47,10 +47,10 @@ func New() *zap.Logger {
 		LogsPath: []*logFilePath{{
 			Level: "error",
 			Hook: &lumberjack.Logger{
-				Filename:   "./logs/gaven.log", // Filename is the file to write logs to.
-				MaxSize:    1024,               // megabytes
-				MaxAge:     7,                  // days
-				MaxBackups: 3,                  // the maximum number of old log files to retain.
+				Filename:   "./logs/zlog.log", // Filename is the file to write logs to.
+				MaxSize:    1024,              // megabytes
+				MaxAge:     7,                 // days
+				MaxBackups: 3,                 // the maximum number of old log files to retain.
 			},
 		},
 		},
