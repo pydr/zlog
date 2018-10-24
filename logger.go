@@ -112,7 +112,7 @@ func New() *zap.Logger {
 	} else {
 		logger = zap.New(core)
 	}
-	logger.Info("Default Logger init success")
+	logger.Debug("Zlog init success")
 	return logger
 }
 
