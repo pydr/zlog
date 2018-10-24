@@ -15,3 +15,13 @@ func TestLogger(t *testing.T) {
 	logger.Fatal("This is an Fatal")
 	logger.Panic("This is an Panic")
 }
+
+func TestGlobalLogger(t *testing.T) {
+	Zlog.Debug("This is a DEBUG message")
+	Zlog.Info("This is an INFO message")
+	Zlog.Info("This is an INFO message with fields", zap.String("region", "us-west"), zap.Int("id", 2))
+	Zlog.Warn("This is a WARN message")
+	Zlog.Error("This is an ERROR message")
+	Zlog.Fatal("This is an Fatal")
+	Zlog.Panic("This is an Panic")
+}
