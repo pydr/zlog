@@ -38,14 +38,14 @@ func init() {
 func New() *zap.Logger {
 	logcfg := logConfig{
 		Desc:      "development",
-		Level:     "debug",
+		Level:     "error",
 		Stdout:    true,
 		Encoding:  "console",
 		AddCaller: true,
 		Color:     true,
 		FilesOut:  false,
 		LogsPath: []*logFilePath{{
-			Level: "debug",
+			Level: "error",
 			Hook: &lumberjack.Logger{
 				Filename:   "./logs/gaven.log", // Filename is the file to write logs to.
 				MaxSize:    1024,               // megabytes
