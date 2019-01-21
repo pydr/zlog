@@ -1,0 +1,13 @@
+version: $version
+
+profiles:
+  - id: release
+    default: true
+    props:
+      version: v1.1.8
+      profile: release
+      domain: ~
+
+deps:
+  - get: -u go.uber.org/zap
+  - get: -u gopkg.in/natefinch/lumberjack.v2
