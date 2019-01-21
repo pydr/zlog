@@ -9,5 +9,5 @@ profiles:
       domain: ~
 
 deps:
-  - get: -u go.uber.org/zap
-  - get: -u gopkg.in/natefinch/lumberjack.v2
+  - get: go.uber.org/zap
+  - get: gopkg.in/natefinch/lumberjack.v2
