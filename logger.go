@@ -9,6 +9,7 @@ import (
 	"io/ioutil"
 	"os"
 	"strings"
+	"time"
 )
 
 type logConfig struct {
@@ -33,6 +34,10 @@ var (
 
 func init() {
 	Zlog = New()
+}
+
+func TimeEncoder(t time.Time, enc zapcore.PrimitiveArrayEncoder) {
+	enc.AppendString(t.Format("2006-01-02 15:04:05.000"))
 }
 
 func New() *zap.Logger {
@@ -80,6 +85,7 @@ func New() *zap.Logger {
 		fmt.Println("'" + logcfg.Desc + "' in the configuration file for desc is an invalid value, it could be 'development' or 'production'")
 		os.Exit(1)
 	}
+	encoderConfig.EncodeTime = TimeEncoder
 	if strings.EqualFold(logcfg.Encoding, "json") {
 		fileEncoder = zapcore.NewJSONEncoder(encoderConfig)
 		consoleEncoder = zapcore.NewJSONEncoder(encoderConfig)
